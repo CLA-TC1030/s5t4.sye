@@ -24,7 +24,7 @@ classDiagram
       class InvalidOptionException
       class EndGameException
       
-      Game:+getInput() string
+      Game:+getInput()* string
       Game:+start()
       Game:+endGame() bool
       GameAutomatic:+getInput() string
