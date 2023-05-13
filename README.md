@@ -2,10 +2,10 @@
 
 ## Descripción del Problema
 
-Esta tarea consiste en implementar el Juego de Serpientes y Escaleras usando Excepciones.
+Esta tarea consiste en extender el Juego de Serpientes y Escaleras usando Excepciones.
 
 ## Diagrama de Clases
-
+Construye aquí el Diagrama de Clases de tu solución, usando el [Lenguaje Mermaid](https://mermaid.js.org/syntax/classDiagram.html).
 ```mermaid
 classDiagram
       class Game
@@ -39,7 +39,7 @@ classDiagram
       InvalidOptionException : +what()
       EndGameException : +what()
 ```
-
+Puedes apoyarte con el editor [Mermaid-live](https://mermaid.live/).
 
 ## Objetivo
 
