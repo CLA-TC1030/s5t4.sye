@@ -72,7 +72,10 @@ Explicación de los otros archivos:
     * Para conocer los comandos de depuración consulta:
      https://u.osu.edu/cstutorials/2018/09/28/how-to-debug-c-program-using-gdb-in-6-simple-steps/
      
-- Comando para depurar con `vsCode` en `GitPod`: `make debugvs` 
+- Comando para depurar la ejecución del programa con `vsCode` o en `GitPod`: `make debugvs` 
+    * Utilizar el depurador de la IDE.
+
+- Comando para depurar la ejecución de las pruebas con `vsCode` o en `GitPod`: `make debugtest` 
     * Utilizar el depurador de la IDE.
 
 ## Notas
