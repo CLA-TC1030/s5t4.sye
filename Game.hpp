@@ -13,7 +13,7 @@ protected:
     Tablero t;
     Jugador j[MAX_JUGADORES];
     CDado d;
-    bool swio;
+    bool swio; // IO por Archivo=true, IO por Teclado=false
     Turno* Pturno;
 
 // Archivos de entrada/salida para el caso de configuracion de IO por archivos ---------
@@ -24,6 +24,7 @@ protected:
 public:
     static int turno;
     Game();
+// Game("Archivo de tablero", Dado aleatorio=true/false, IO por Archivo=true, IO por Teclado=false)
     Game(std::string, bool, bool);
     void start();
     void outMsg(std::string);
