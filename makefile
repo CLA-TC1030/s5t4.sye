@@ -1,7 +1,7 @@
 all: clean test
 
 appTests: test/tests.cpp
-	g++ -Wall --std=c++17 test/tests.cpp test/catch_amalgamated.cpp test/chkFiles.cpp EndGameException.cpp InvalidOptionException.cpp InvalidConfigurationException.cpp Turno.cpp GameAutomatic.cpp GameManual.cpp Game.cpp CDado.cpp Jugador.cpp Tablero.cpp CCasilla.cpp CasillaNormal.cpp CasillaEscalera.cpp CasillaSerpiente.cpp -o build/appTests
+	g++ --std=c++17 test/tests.cpp test/catch_amalgamated.cpp test/chkFiles.cpp EndGameException.cpp InvalidOptionException.cpp InvalidConfigurationException.cpp Turno.cpp GameAutomatic.cpp GameManual.cpp Game.cpp CDado.cpp Jugador.cpp Tablero.cpp CCasilla.cpp CasillaNormal.cpp CasillaEscalera.cpp CasillaSerpiente.cpp -o build/appTests
 test: appTests
 	# executes all tests
 	./build/appTests
@@ -20,4 +20,4 @@ debug:
 debugvs:
 	g++ *.cpp -g -o build/dexercise
 debugtest: 
-	g++ -Wall --std=c++17 test/tests.cpp test/catch_amalgamated.cpp test/chkFiles.cpp EndGameException.cpp InvalidOptionException.cpp InvalidConfigurationException.cpp Turno.cpp GameAutomatic.cpp GameManual.cpp Game.cpp CDado.cpp Jugador.cpp Tablero.cpp CCasilla.cpp CasillaNormal.cpp CasillaEscalera.cpp CasillaSerpiente.cpp -g -o build/dexercise
+	g++ --std=c++17 test/tests.cpp test/catch_amalgamated.cpp test/chkFiles.cpp EndGameException.cpp InvalidOptionException.cpp InvalidConfigurationException.cpp Turno.cpp GameAutomatic.cpp GameManual.cpp Game.cpp CDado.cpp Jugador.cpp Tablero.cpp CCasilla.cpp CasillaNormal.cpp CasillaEscalera.cpp CasillaSerpiente.cpp -g -o build/dexercise
