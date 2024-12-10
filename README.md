@@ -123,13 +123,12 @@ Para más información consulta el [MarketPlace](https://marketplace.visualstudi
 Explicación de los otros archivos:
 
 - Archivo `test/tests.cpp` tiene las pruebas de esta actividad (NO LO CAMBIES!)
-- Archivo `test/catch.hpp` tiene la biblioteca de pruebas  CATCH2 (NO LA CAMBIES!)
 - Archivo `makefile` tienes los comandos para ejecutar la actividad (NO LO CAMBIES!)
 - Archivo  `./build/appTests` se generará después de compilar (para **pruebas locales**, solo ejecútalo)
 
 ## Comandos para pruebas locales, ejecución y depuración
 
-- Comando para construir y ejecutar pruebas: `make` o `make test`
+- Comando para construir y ejecutar pruebas: `make` o `make test` o `make ctest`
     * Si el ejecutable ya está construido, sólo teclea : `./build/appTests`
 
 - Comando para construir y ejecutar la aplicación: `make run` 
