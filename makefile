@@ -18,4 +18,4 @@ debugvs:
 debugtest: 
 	cd build && cmake -DVISUAL_STUDIO_DEBUG_TEST=ON .. && cmake --build . && clear && echo "Lista la compilación para depuración de pruebas con VS Code. Abra el programa principal e inicie la depuración de pruebas de VS Code..." && cd ..
 ctest: appTests
-	cd build && ctest && cd ..
+	cd build && ctest -VV && cd ..
