@@ -15,6 +15,7 @@ option(TEST_EXECUTABLE "Enable Test Executable" OFF)
 option(VISUAL_STUDIO_DEBUG_NORMAL "Enable Visual Studio Debugging" OFF)
 option(VISUAL_STUDIO_DEBUG_TEST "Enable Visual Studio Test Debugging" OFF)
 
+
 # Add executables
 
 if(MAIN_EXECUTABLE)
@@ -22,7 +23,22 @@ if(MAIN_EXECUTABLE)
 endif()
 
 if(TEST_EXECUTABLE)
+    # Enable testing with CTest
+    enable_testing()
+    # Add FetchContent module to download Catch2 from GitHub
+    include(FetchContent)
+    FetchContent_Declare(
+      Catch2
+      GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+      GIT_TAG v2.13.7
+    )
+    FetchContent_MakeAvailable(Catch2)
+
     add_executable(appTests ${TEST_SOURCES})
+    target_link_libraries(appTests PRIVATE Catch2::Catch2)
+
+    # Add test target for CTest
+    add_test(NAME appTests COMMAND appTests)
 endif()
 
 if(VISUAL_STUDIO_DEBUG_NORMAL)
@@ -33,8 +49,18 @@ if(VISUAL_STUDIO_DEBUG_NORMAL)
 endif()
 
 if(VISUAL_STUDIO_DEBUG_TEST)
+    # Add FetchContent module to download Catch2 from GitHub
+    include(FetchContent)
+    FetchContent_Declare(
+      Catch2
+      GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+      GIT_TAG v2.13.7
+    )
+    FetchContent_MakeAvailable(Catch2)
+
     # Add executable target for visual studio test debugging
     add_executable(dexercise ${TEST_SOURCES})
+    target_link_libraries(dexercise PRIVATE Catch2::Catch2)
     set_target_properties(dexercise PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
     target_compile_options(dexercise PRIVATE -g)
 endif()
