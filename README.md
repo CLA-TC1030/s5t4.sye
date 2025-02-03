@@ -106,6 +106,13 @@ classDiagram
 El repositorio está configurado para crear Diagramas de clases UML con ```draw.io```. Para usarlo simplemente das doble clic en el archivo  ```uml.class.drawio.png``` y se activará el editor ```draw.io``` incrustado en ```VSCode``` para edición. Asegúrate de agregar las formas UML en el menú de formas del lado izquierdo (opción ```+Más formas```). Al final insertas el archivo ```uml.class.drawio.png``` en apartado de UML de este archivo README.
 
 Para más información consulta el [MarketPlace](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio).
+## Prompt para revisar la aplicación de estándares de codificación y sugerir mejoras con IA
+
+Coloca como contexto el archivo `.github/CONTRIBUTING.md` y el (o los) `<archivo.cpp>`(s) a verificar la aplicación de estándares de programación. Usa el siguiente prompt:
+
+```
+Revisa la aplicación de estándares de codificación definidos en #file:CONTRIBUTING.md en el #file:<archivo.cpp> y sugiere posibles mejoras para cumplir con ellos
+```
 
 ## Objetivo
 
