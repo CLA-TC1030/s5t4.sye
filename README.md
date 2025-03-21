@@ -98,6 +98,11 @@ classDiagram
 [Diagramas de clase en el lenguaje Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
 
 ## Prompt para generar el Diagrama de Clases con IA - mermAID
+
+1. Da clic en la herramienta  `mermAId`.
+2. En la ventana `mermAId` da clic en `Continue in Chat`.
+3. Coloca como contexto el/los `<archivo.cpp/hpp>`(s) a crearles su Diagrama de clases UML.
+4. Usa el siguiente *prompt*:
 ```
 @mermaid /uml
 ```
