@@ -6,7 +6,7 @@ appTests:
 test: appTests
 	clear && ./build/appTests && cd ..
 clean:
-	find build -mindepth 1 ! -name 'README.txt' ! -name 't1.tab' ! -name 'input' -delete && rm -f output && mkdir build/test && cp test/toutput build/test/toutput && clear
+	find build -mindepth 1 ! -name 'README.txt' ! -name 't1.tab' ! -name 'input' -delete && rm -f output && mkdir build/test && cp test/toutput build/test/toutput
 run:
 	cd build && cmake -DMAIN_EXECUTABLE=ON .. && cmake --build . && clear && ./exercise && cd ..
 debug: 
