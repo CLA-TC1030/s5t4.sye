@@ -4,6 +4,8 @@
 
 Esta tarea consiste en extender el Juego de Serpientes y Escaleras usando Excepciones.
 
+**IMPORTANTE:** *En todas las ejecuciones que finalizan anormalmente deberá siempre regresar 0 al sistema operativo por razón del sistema de Autograding, aunque al liberarse este programa a producción realmente debería ser 1*
+
 ## Ejemplo de Ejecución-1
 ```
 Validando configuraciones generales del Juego ...
