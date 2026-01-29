@@ -1,3 +1,5 @@
+.PHONY: all appTests test clean run debug debugvs debugtest ctest push pullpush
+
 all: clean test
 
 appTests: 
@@ -19,3 +21,16 @@ debugtest:
 	cd build && cmake -DVISUAL_STUDIO_DEBUG_TEST=ON .. && cmake --build . && clear && echo "Lista la compilación para depuración de pruebas con VS Code. Abra el programa principal e inicie la depuración de pruebas de VS Code..." && cd ..
 ctest: appTests
 	cd build && ctest -VV && cd ..
+push: clean
+	git add . && git commit -m "Listo el avance" && git push origin main
+pullpush: clean
+	@echo "Sincronizando con el repositorio remoto..."
+	@git pull --rebase origin main || (echo "Error: Fallo al hacer pull..." && exit 1)
+	@if [ -z "$$(git status --porcelain)" ]; then \
+		echo "No hay cambios locales para empujar."; \
+	else \
+		echo "Empujando cambios locales..."; \
+		git add . || (echo "Error: Fallo al agregar archivos." && exit 1); \
+		git commit -m "..." || (echo "Error: Fallo al hacer commit." && exit 1); \
+		git push origin main || (echo "Error: Fallo al empujar cambios." && exit 1); \
+	fi
