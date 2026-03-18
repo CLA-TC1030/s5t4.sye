@@ -6,6 +6,12 @@ Esta tarea consiste en extender el Juego de Serpientes y Escaleras usando Excepc
 
 **IMPORTANTE:** *En todas las ejecuciones que finalizan anormalmente deberá siempre regresar 0 al sistema operativo por razón del sistema de Autograding, aunque al liberarse este programa a producción realmente debería ser 1*
 
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Snakes_and_Ladders.jpg/1280px-Snakes_and_Ladders.jpg"
+       alt="Tablero serpientes y escaleras (obra india del siglo XIX)"
+       width="300">
+</p>
+
 ## Ejemplo de Ejecución-1
 ```
 Validando configuraciones generales del Juego ...
